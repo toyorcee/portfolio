@@ -8,7 +8,7 @@
 **Email:** oluwatoyosiolaniyan@gmail.com  
 **GitHub:** [github.com/toyorcee](https://github.com/toyorcee)  
 **Instagram:** [@teecrane_](https://www.instagram.com/teecrane_/)  
-**Portfolio:** [Your Portfolio URL]
+**Portfolio:** [https://portfolio-snowy-mu-55.vercel.app]
 
 ---
 
@@ -245,13 +245,24 @@ Cloudinary, AJAX, IndexedDB, EmailJS, Toastify, Algorithms, SEO, Web Performance
 
 ## Education
 
-*[Add your educational background here]*
+University of Ilorin,
+B.ENG (Hons), 
+Mechanical Engineering
+
+Lagos state model college Igbokuta,
+Ikorodu,
+Lagos state.
+
+Glorylany nursery and primary school 
+Ejigbo, Lagos state.
 
 ---
-
 ## Certifications
-
-*[Add any relevant certifications here]*
+Education & Certifications 
+● Django Framework Certification — Coursera, 2023.
+● Diploma in Full Stack Web Development — Bluescripts, 2023.
+● Diploma in Web & Graphics Design — Douglos Computer Institute, 2020–2021 .
+● B.Eng. Mechanical Engineering — University of Ilorin, 2017.
 
 ---
 

@@ -195,7 +195,7 @@ const Projects = () => {
         "Recharts",
         "jsPDF",
       ],
-      link: "https://sbms-2z2m.onrender.com/",
+      link: "https://sbms.digitalentshub.net/",
       image: sbmsImage,
       type: "web",
     },
