@@ -43,6 +43,13 @@ try {
   sneakersImage = null;
 }
 
+let habibistudentImage;
+try {
+  habibistudentImage = require("../assets/images/habibistudent.jfif");
+} catch (e) {
+  habibistudentImage = null;
+}
+
 const Projects = () => {
   const projects = [
     {
@@ -265,6 +272,44 @@ const Projects = () => {
       ],
       link: "https://techxtrostore.vercel.app/",
       image: sneakersImage,
+      type: "web",
+    },
+    {
+      id: 7,
+      title: "Skill Kernel",
+      role: "Frontend Developer (Template)",
+      company: "Skill Kernel",
+      period: "Production Ready",
+      description:
+        "A dynamic, responsive educational platform template designed for course providers and learning institutions. Built with vanilla HTML, CSS, and JavaScript to deliver optimal performance and smooth user interactions. The platform features a comprehensive course catalog system, advanced search and filtering capabilities, category-based navigation, and an intuitive interface optimized for accessibility and user engagement. Designed as a scalable template that can be easily enhanced with backend integration, payment systems, and advanced learning management features.",
+      modules: [
+        "Course Catalog & Display",
+        "Advanced Search & Filtering",
+        "Category-Based Navigation",
+        "Course Detail Pages",
+        "Popular Courses Section",
+        "Short Courses Showcase",
+        "Topic/Subject Filtering",
+        "Course Reviews System",
+        "User Authentication (Login/Apply)",
+        "Responsive Design (Mobile-First)",
+        "Performance Optimization",
+        "Accessibility Features",
+        "Newsletter Subscription",
+        "Multi-Level Course Organization",
+      ],
+      technologies: [
+        "HTML5",
+        "CSS3",
+        "JavaScript (ES6+)",
+        "Responsive Design",
+        "Vanilla JS",
+        "Modern CSS Features",
+        "Performance Optimization",
+        "Accessibility (WCAG)",
+      ],
+      link: "https://skill-kernel-six.vercel.app/",
+      image: habibistudentImage,
       type: "web",
     },
     // Add more projects here following the same structure
