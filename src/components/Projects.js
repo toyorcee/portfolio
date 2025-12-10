@@ -50,6 +50,13 @@ try {
   habibistudentImage = null;
 }
 
+let wakaImage;
+try {
+  wakaImage = require("../assets/images/waka.jpg");
+} catch (e) {
+  wakaImage = null;
+}
+
 const Projects = () => {
   const projects = [
     {
@@ -312,6 +319,57 @@ const Projects = () => {
       image: habibistudentImage,
       type: "web",
     },
+    // {
+    //   id: 8,
+    //   title: "NightWalker",
+    //   role: "Full Stack Developer",
+    //   company: "NightWalker",
+    //   period: "In Progress",
+    //   description:
+    //     "A tech-enabled night logistics platform that provides secure and efficient delivery services between 5:00 PM and 10:00 PM, bridging the gap when most dispatch companies stop operations. The platform connects customers, vendors, and riders (NightWalkers) through mobile apps with real-time delivery requests, AI-optimized safe routing, live tracking, and in-app payments. Features advanced safety systems including AI Safe Route System, Emergency SOS buttons, real-time monitoring, and insurance-backed assurance for secure night-time logistics operations.",
+    //   modules: [
+    //     "Customer App (Request & Track Deliveries)",
+    //     "AI Safe Route System (Safest & Best-Lit Routes)",
+    //     "Emergency SOS Button (24/7 Control Room Connection)",
+    //     "Real-Time GPS Tracking & Live Updates",
+    //     "In-App Chat & Voice Notes",
+    //     "Paystack/Moniepoint Payment Integration",
+    //     "Scheduled Night Deliveries (Pre-booking)",
+    //     "Smart Package Tracking with ETA",
+    //     "Reorder & Bulk Delivery Scheduler",
+    //     "Rider App (Verification & Navigation)",
+    //     "Rider Wallet System & Earnings Dashboard",
+    //     "Night Mode Bonus System",
+    //     "Rider Safety Score & Performance Badges",
+    //     "Safe Rest Stations Mapping",
+    //     "Rider Insurance Plan Integration",
+    //     "Admin Dashboard (Live Tracking & Analytics)",
+    //     "Real-Time Rider Risk Monitoring",
+    //     "Route Optimization & Demand Forecasting",
+    //     "Vendor Management System",
+    //     "Custom Notifications (SMS & App Alerts)",
+    //   ],
+    //   technologies: [
+    //     "React Native",
+    //     "React",
+    //     "Node.js",
+    //     "Express.js",
+    //     "MongoDB",
+    //     "AI/ML Integration",
+    //     "Paystack API",
+    //     "Moniepoint API",
+    //     "Socket.io",
+    //     "Real-Time GPS Tracking",
+    //     "Push Notifications",
+    //     "Map Integration",
+    //     "Emergency Response Systems",
+    //     "Data Analytics",
+    //   ],
+    //   link: "#",
+    //   image: wakaImage,
+    //   type: "web-mobile",
+    //   status: "in-progress",
+    // },
     // Add more projects here following the same structure
   ];
 
