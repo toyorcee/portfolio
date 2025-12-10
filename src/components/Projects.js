@@ -36,6 +36,13 @@ try {
   payrollImage = null;
 }
 
+let sneakersImage;
+try {
+  sneakersImage = require("../assets/images/sneakers.jpg");
+} catch (e) {
+  sneakersImage = null;
+}
+
 const Projects = () => {
   const projects = [
     {
@@ -217,6 +224,48 @@ const Projects = () => {
       image: payrollImage,
       type: "web",
       status: "in-progress",
+    },
+    {
+      id: 6,
+      title: "TechXtro Store",
+      role: "Full Stack Developer",
+      company: "TechXtro Store",
+      period: "Production Ready",
+      description:
+        "A modern, responsive e-commerce platform specializing in tech products, fashion, and lifestyle items. Built with a focus on performance, user experience, and seamless payment processing. The platform features a comprehensive product catalog with categories for Men, Women, Jewelry, and Gadgets, integrated Paystack payment gateway for secure transactions, and a sophisticated dark/light mode theme system for enhanced user comfort. Implemented real-time cart management, order tracking, and automated email notifications using EmailJS for customer communication.",
+      modules: [
+        "Product Catalog & Management",
+        "Shopping Cart & Checkout",
+        "Paystack Payment Integration",
+        "Dark/Light Mode Theme System",
+        "User Authentication & Profiles",
+        "Order Management & Tracking",
+        "EmailJS Integration for Notifications",
+        "Product Search & Filtering",
+        "Category-Based Navigation",
+        "Responsive Design (Mobile, Tablet, Desktop)",
+        "Toast Notifications (React Toastify)",
+        "Smooth Animations (Framer Motion)",
+        "State Management (Redux)",
+        "Modern UI Components (MUI)",
+      ],
+      technologies: [
+        "React",
+        "Redux",
+        "Tailwind CSS",
+        "Material-UI (MUI)",
+        "Paystack API",
+        "EmailJS",
+        "React Toastify",
+        "Framer Motion",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "RESTful APIs",
+      ],
+      link: "https://techxtrostore.vercel.app/",
+      image: sneakersImage,
+      type: "web",
     },
     // Add more projects here following the same structure
   ];
