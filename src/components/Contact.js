@@ -119,7 +119,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 bg-dark-gray relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 bg-dark-gray relative overflow-hidden"
     >
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

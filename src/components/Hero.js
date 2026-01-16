@@ -47,7 +47,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gradient-to-br from-black via-dark-gray to-black"
+      className="min-h-screen flex items-center justify-center pt-24 pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gradient-to-br from-black via-dark-gray to-black"
     >
       <div className="max-w-7xl mx-auto w-full">
         <motion.div

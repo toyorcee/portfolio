@@ -1,5 +1,6 @@
-import React from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import PlayStoreBadge from "./PlayStoreBadge";
 
 let elraLogo;
 try {
@@ -50,15 +51,105 @@ try {
   habibistudentImage = null;
 }
 
-let wakaImage;
+
+
+let smartInvoiceImage;
 try {
-  wakaImage = require("../assets/images/waka.jpg");
+  smartInvoiceImage = require("../assets/images/smartinvoice.png");
 } catch (e) {
-  wakaImage = null;
+  smartInvoiceImage = null;
+}
+
+let moprosperImage;
+try {
+  moprosperImage = require("../assets/images/moprosper.png");
+} catch (e) {
+  moprosperImage = null;
+}
+
+let ninthWakaImage;
+try {
+  ninthWakaImage = require("../assets/images/9thwaka.png");
+} catch (e) {
+  ninthWakaImage = null;
 }
 
 const Projects = () => {
-  const projects = [
+  const [activeTab, setActiveTab] = useState("web");
+
+  const mobileProjects = [
+    {
+      id: 101,
+      title: "Moprosper",
+      role: "Full Stack Developer",
+      company: "Moprosper (FinTech)",
+      period: "Available in PlayStore (App Store In Progress)",
+      description:
+        "A high-yield investment and savings platform designed to help users preserve wealth and achieve financial growth. The mobile application offers secure investment vaults for Gold, Real Estate, and Treasury Bills, alongside flexible savings plans yielding up to 20% APY. Features integrated utility payments, bank-level security protocols, and real-time interest tracking to empower users on their financial journey.",
+      modules: [
+        "Investment Vaults (Gold, TBills)",
+        "Flexible & Locked Savings Plans",
+        "Utility Payments (Airtime, Power, Cable)",
+        "Wallet Management System",
+        "KYC & Identity Verification",
+        "Bank-Level Security & Encryption",
+        "Real-time Interest Calculation",
+        "Referral & Rewards System",
+        "Transaction History & Statements",
+        "Push Notifications & Alerts",
+      ],
+      technologies: [
+        "React Native",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Redux",
+        "Paystack API",
+        "Firebase",
+      ],
+      link: "https://moprosper.com",
+      image: moprosperImage,
+      type: "mobile",
+    },
+    {
+      id: 102,
+      title: "9thWaka",
+      role: "Full Stack Developer",
+      company: "9thWaka (Logistics)",
+      period: "In Progress",
+      description:
+        "A tech-enabled night logistics platform that provides secure and efficient delivery services running till dawn, bridging the gap when most dispatch companies stop operations. The platform connects customers, vendors, and riders (NightWalkers) through mobile apps with real-time delivery requests, AI-optimized safe routing, live tracking, and in-app payments.",
+      modules: [
+        "Customer App (Request & Track Deliveries)",
+        "AI Safe Route System (Safest & Best-Lit Routes)",
+        "Emergency SOS Button",
+        "Real-Time GPS Tracking & Live Updates",
+        "In-App Chat & Voice Notes",
+        "Paystack/Moniepoint Payment Integration",
+        "Scheduled Night Deliveries",
+        "Rider App (Verification & Navigation)",
+        "Rider Wallet System & Earnings",
+        "Night Mode Bonus System",
+        "Admin Dashboard (Live Tracking)",
+        "Vendor Management System",
+      ],
+      technologies: [
+        "React Native",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Socket.io",
+        "Paystack API",
+        "Google Maps API",
+        "Firebase",
+      ],
+      link: "https://9thwaka-landing.vercel.app/",
+      image: ninthWakaImage,
+      type: "mobile",
+    },
+  ];
+
+  const webProjects = [
     {
       id: 1,
       title: "ELRA ERP System",
@@ -84,6 +175,39 @@ const Projects = () => {
       technologies: ["React", "Node.js", "MongoDB", "Express.js", "MERN Stack"],
       link: "https://elra-erp.onrender.com/",
       image: elraLogo,
+      type: "web",
+    },
+    {
+      id: 0,
+      title: "SmartInvoice",
+      role: "Lead Full Stack Developer",
+      company: "SmartInvoice (SaaS)",
+      period: "Production Ready",
+      description:
+        "A multi-tenant subscription billing and invoicing platform designed for business owners to manage their own clients and invoicing. It serves as a centralized billing engine that integrates with external applications (like Payroll Systems) via secure webhooks. Users can generate professional invoices, handle SaaS subscriptions (monthly/yearly) or outright software sales, and automate access control for third-party apps through a robust payment pipeline.",
+      modules: [
+        "Multi-tenant Architecture",
+        "SaaS & Outright Sales Models",
+        "Automated Invoice Generation & Mailing",
+        "Paystack Payment Pipeline (Initial, Renewals, Upgrades)",
+        "Secure Webhook Orchestration (HMAC Signed)",
+        "Cross-System Subscription Sync",
+        "Client & Business Management",
+        "Role-Based Access Control",
+        "Audit Logging & Reliability",
+        "Nigerian Tax & Compliance Workflows",
+      ],
+      technologies: [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Paystack API",
+        "Webhooks (HMAC)",
+        "EmailJS / Nodemailer",
+        "System Design",
+      ],
+      link: "https://smartinvoice.digitalentshub.net",
+      image: smartInvoiceImage,
       type: "web",
     },
     {
@@ -152,10 +276,9 @@ const Projects = () => {
         "Express.js",
         "MERN Stack",
       ],
-      link: "#",
+      link: "https://zamani.digitalentshub.net",
       image: zamaniLogo,
       type: "web-mobile",
-      status: "in-progress",
     },
     {
       id: 4,
@@ -206,7 +329,7 @@ const Projects = () => {
       company: "PMS",
       period: "In Progress",
       description:
-        "A comprehensive cloud-based SaaS payroll solution designed to automate and streamline payroll processing for organizations of all sizes. Eliminates manual payroll calculations, ensures compliance with Nigerian tax regulations (PAYE, Pension, NHF, NSITF), and provides real-time insights through role-based dashboards. Features automated payroll processing, template management, multi-level approval workflows, and employee self-service portal.",
+        "A comprehensive cloud-based SaaS payroll solution designed to automate and streamline payroll processing. It integrates seamlessly with SmartInvoice for subscription management, receiving secure webhooks to automatically activate, renew, or suspend access based on payment status. Eliminates manual payroll calculations, ensures compliance with Nigerian tax regulations (PAYE, Pension, NHF, NSITF), and provides real-time insights through role-based dashboards.",
       modules: [
         "Automated Payroll Processing",
         "Template Management System",
@@ -234,10 +357,9 @@ const Projects = () => {
         "CSV Processing",
         "SaaS Architecture",
       ],
-      link: "#",
+      link: "https://payroll.digitalentshub.net/",
       image: payrollImage,
       type: "web",
-      status: "in-progress",
     },
     {
       id: 6,
@@ -482,14 +604,38 @@ const Projects = () => {
           </motion.p>
         </motion.div>
 
+        <div className="flex justify-center mb-12 space-x-4">
+          <button
+            onClick={() => setActiveTab("web")}
+            className={`px-8 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 ${
+              activeTab === "web"
+                ? "bg-yellow text-black shadow-lg shadow-yellow/20 scale-105"
+                : "bg-transparent border border-ash/30 text-ash hover:border-yellow/50 hover:text-yellow"
+            }`}
+          >
+            Websites
+          </button>
+          <button
+            onClick={() => setActiveTab("mobile")}
+            className={`px-8 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 ${
+              activeTab === "mobile"
+                ? "bg-yellow text-black shadow-lg shadow-yellow/20 scale-105"
+                : "bg-transparent border border-ash/30 text-ash hover:border-yellow/50 hover:text-yellow"
+            }`}
+          >
+            Mobile Apps
+          </button>
+        </div>
+
         <motion.div
+          key={activeTab}
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           className="space-y-8"
         >
-          {projects.map((project, index) => (
+          {(activeTab === "web" ? webProjects : mobileProjects).map((project, index) => (
             <motion.div
               key={project.id}
               variants={cardVariants}
@@ -544,72 +690,67 @@ const Projects = () => {
                 {/* Content Section */}
                 <div className="lg:w-2/3 p-6 lg:p-8 flex flex-col">
                   {/* Header */}
-                  <div className="mb-4">
-                    <div className="flex items-start justify-between gap-4 mb-2">
-                      <div>
-                        <div className="flex items-center gap-3 flex-wrap mb-1">
-                          <motion.h3
-                            className="text-2xl sm:text-3xl font-bold text-yellow"
-                            whileHover={{ x: 5 }}
-                            transition={{ duration: 0.2 }}
-                          >
-                            {project.title}
-                          </motion.h3>
-                          {project.status === "in-progress" && (
-                            <span className="px-2 py-1 text-xs font-semibold bg-yellow/20 border border-yellow/30 text-yellow rounded-md">
-                              In Progress
-                            </span>
-                          )}
+                  <div className="mb-6">
+                    <div className="mb-4">
+                      <div className="flex items-center gap-3 flex-wrap mb-1">
+                        <motion.h3
+                          className="text-2xl sm:text-3xl font-bold text-yellow"
+                          whileHover={{ x: 5 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          {project.title}
+                        </motion.h3>
+                        {project.status === "in-progress" && (
+                          <span className="px-2 py-1 text-xs font-semibold bg-yellow/20 border border-yellow/30 text-yellow rounded-md">
+                            In Progress
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-ash-light text-sm font-medium mb-1">
+                        {project.role}
+                      </p>
+                      <p className="text-ash text-sm mb-0.5">{project.company}</p>
+                      {project.id === 101 ? (
+                        <div className="flex flex-col gap-2 mt-2">
+                          <PlayStoreBadge />
+                          <p className="text-ash-dark text-xs flex items-center gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-yellow/50 animate-pulse" />
+                            App Store In Progress
+                          </p>
                         </div>
-                        <p className="text-ash-light text-sm font-medium">
-                          {project.role}
-                        </p>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        {project.link && project.link !== "#" && (
-                          <div className="relative group/link">
-                            <motion.a
-                              href={project.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              whileHover={{ scale: 1.1 }}
-                              whileTap={{ scale: 0.9 }}
-                              className="text-yellow hover:text-yellow-dark text-2xl cursor-pointer"
-                              aria-label={`View ${project.title}`}
-                            >
-                              ↗
-                            </motion.a>
-                            {/* Tooltip */}
-                            <div className="absolute right-0 top-full mt-2 px-3 py-1.5 bg-black/90 border border-yellow/30 rounded-lg text-xs text-yellow whitespace-nowrap opacity-0 group-hover/link:opacity-100 transition-opacity duration-300 pointer-events-none z-50">
-                              Visit main site
-                              <div className="absolute -top-1 right-4 w-2 h-2 bg-black border-l border-t border-yellow/30 rotate-45"></div>
-                            </div>
-                          </div>
-                        )}
-                        {project.adminLink && (
-                          <div className="relative group/admin">
-                            <motion.a
-                              href={project.adminLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              whileHover={{ scale: 1.1 }}
-                              whileTap={{ scale: 0.9 }}
-                              className="text-ash hover:text-yellow text-xl cursor-pointer"
-                              aria-label={`View ${project.title} Admin`}
-                            >
-                              ⚙️
-                            </motion.a>
-                            {/* Tooltip */}
-                            <div className="absolute right-0 top-full mt-2 px-3 py-1.5 bg-black/90 border border-yellow/30 rounded-lg text-xs text-yellow whitespace-nowrap opacity-0 group-hover/admin:opacity-100 transition-opacity duration-300 pointer-events-none z-50">
-                              Visit admin panel
-                              <div className="absolute -top-1 right-4 w-2 h-2 bg-black border-l border-t border-yellow/30 rotate-45"></div>
-                            </div>
-                          </div>
-                        )}
-                      </div>
+                      ) : (
+                        <p className="text-ash-dark text-xs">{project.period}</p>
+                      )}
                     </div>
-                    <p className="text-ash text-sm mb-1">{project.company}</p>
-                    <p className="text-ash-dark text-xs">{project.period}</p>
+
+                    <div className="flex flex-col gap-3">
+                      {project.link && project.link !== "#" && (
+                        <motion.a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          className="block w-full px-4 py-3 bg-yellow text-black text-sm font-bold rounded-lg hover:bg-yellow-dark transition-colors text-center uppercase tracking-wider shadow-lg shadow-yellow/10"
+                          aria-label={`View ${project.title}`}
+                        >
+                          {project.type === "mobile" ? "View Landing Page Website" : "View Website"}
+                        </motion.a>
+                      )}
+                      {project.adminLink && (
+                        <motion.a
+                          href={project.adminLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          className="block w-full px-4 py-3 bg-transparent border border-ash text-ash-light text-sm font-bold rounded-lg hover:border-yellow hover:text-yellow transition-colors text-center uppercase tracking-wider"
+                          aria-label={`View ${project.title} Admin`}
+                        >
+                          View Admin
+                        </motion.a>
+                      )}
+                    </div>
                   </div>
 
                   {/* Description */}

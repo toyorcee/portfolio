@@ -100,7 +100,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black/95 backdrop-blur-md flex flex-col gap-4 p-6 border-t border-ash/20"
+            className="md:hidden absolute top-20 left-0 right-0 bg-black/95 backdrop-blur-md flex flex-col gap-4 p-6 border-t border-ash/20 min-h-[calc(100vh-5rem)]"
           >
             {navLinks.map((link, index) => (
               <motion.a

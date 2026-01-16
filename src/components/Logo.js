@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 let portfolioLogo;
 try {
-  portfolioLogo = require("../assets/images/logo.jpg");
+  portfolioLogo = require("../assets/images/logo.png");
 } catch (e) {
   portfolioLogo = null;
 }
