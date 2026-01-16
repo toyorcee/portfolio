@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import PlayStoreBadge from "./PlayStoreBadge";
 
 let elraLogo;
@@ -145,6 +145,36 @@ const Projects = () => {
       ],
       link: "https://9thwaka-landing.vercel.app/",
       image: ninthWakaImage,
+      type: "mobile",
+    },
+    {
+      id: 103,
+      title: "Zamani Mobile App",
+      role: "Mobile Developer",
+      company: "Zamani Capital",
+      period: "In Progress",
+      description:
+        "A high-performance mobile application built with Flutter, designed to deliver the full suite of Zamani's financial services. This cross-platform solution enables seamless loan applications, savings management, and wallet transactions with a focus on native performance and smooth user experience. Features include biometric authentication, real-time balance updates, and an intuitive interface for managing the three-wallet system.",
+      modules: [
+        "Cross-Platform Architecture (Flutter)",
+        "Biometric Authentication",
+        "Loan Application & Tracking",
+        "Savings Goal Management",
+        "Three-Wallet System Integration",
+        "Real-time Transaction History",
+        "Push Notifications",
+        "Secure Profile Management",
+      ],
+      technologies: [
+        "Flutter",
+        "Dart",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "RESTful APIs",
+      ],
+      link: "#",
+      image: zamaniLogo,
       type: "mobile",
     },
   ];
@@ -506,22 +536,7 @@ const Projects = () => {
     },
   };
 
-  const cardVariants = {
-    hidden: {
-      opacity: 0,
-      y: 50,
-      scale: 0.9,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: [0.25, 0.46, 0.45, 0.94],
-      },
-    },
-  };
+
 
   const titleVariants = {
     hidden: {
@@ -635,180 +650,202 @@ const Projects = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="space-y-8"
         >
-          {(activeTab === "web" ? webProjects : mobileProjects).map((project, index) => (
-            <motion.div
-              key={project.id}
-              variants={cardVariants}
-              whileHover={{
-                y: -5,
-                transition: { duration: 0.3 },
-              }}
-              className="bg-dark-gray/80 backdrop-blur-sm border border-ash/20 rounded-2xl overflow-hidden transition-all duration-300 hover:border-yellow/50 hover:shadow-2xl hover:shadow-yellow/20 group"
-            >
-              <div className="flex flex-col lg:flex-row">
-                {/* Image Section */}
-                <motion.div
-                  className={`lg:w-1/3 h-64 lg:h-auto relative overflow-hidden flex items-center justify-center ${
-                    project.status === "in-progress"
-                      ? "bg-gradient-to-br from-yellow/10 via-dark-gray to-black"
-                      : "bg-gradient-to-br from-dark-gray to-black"
-                  }`}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {project.image ? (
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-contain p-8"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center">
-                      <div className="text-center p-8">
-                        <div className="text-6xl mb-4 opacity-50 flex items-center justify-center gap-2">
-                          {project.type === "mobile" ? (
-                            "📱"
-                          ) : project.type === "web-mobile" ? (
-                            <>
-                              <span>📱</span>
-                              <span>�</span>
-                            </>
-                          ) : (
-                            "💻"
-                          )}
-                        </div>
-                        <p className="text-ash text-sm uppercase tracking-wider">
-                          {project.title}
-                        </p>
-                      </div>
-                    </div>
-                  )}
-                  {/* Overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </motion.div>
-
-                {/* Content Section */}
-                <div className="lg:w-2/3 p-6 lg:p-8 flex flex-col">
-                  {/* Header */}
-                  <div className="mb-6">
-                    <div className="mb-4">
-                      <div className="flex items-center gap-3 flex-wrap mb-1">
-                        <motion.h3
-                          className="text-2xl sm:text-3xl font-bold text-yellow"
-                          whileHover={{ x: 5 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          {project.title}
-                        </motion.h3>
-                        {project.status === "in-progress" && (
-                          <span className="px-2 py-1 text-xs font-semibold bg-yellow/20 border border-yellow/30 text-yellow rounded-md">
-                            In Progress
-                          </span>
-                        )}
-                      </div>
-                      <p className="text-ash-light text-sm font-medium mb-1">
-                        {project.role}
-                      </p>
-                      <p className="text-ash text-sm mb-0.5">{project.company}</p>
-                      {project.id === 101 ? (
-                        <div className="flex flex-col gap-2 mt-2">
-                          <PlayStoreBadge />
-                          <p className="text-ash-dark text-xs flex items-center gap-1.5">
-                            <span className="w-1.5 h-1.5 rounded-full bg-yellow/50 animate-pulse" />
-                            App Store In Progress
-                          </p>
-                        </div>
-                      ) : (
-                        <p className="text-ash-dark text-xs">{project.period}</p>
-                      )}
-                    </div>
-
-                    <div className="flex flex-col gap-3">
-                      {project.link && project.link !== "#" && (
-                        <motion.a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                          className="block w-full px-4 py-3 bg-yellow text-black text-sm font-bold rounded-lg hover:bg-yellow-dark transition-colors text-center uppercase tracking-wider shadow-lg shadow-yellow/10"
-                          aria-label={`View ${project.title}`}
-                        >
-                          {project.type === "mobile" ? "View Landing Page Website" : "View Website"}
-                        </motion.a>
-                      )}
-                      {project.adminLink && (
-                        <motion.a
-                          href={project.adminLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                          className="block w-full px-4 py-3 bg-transparent border border-ash text-ash-light text-sm font-bold rounded-lg hover:border-yellow hover:text-yellow transition-colors text-center uppercase tracking-wider"
-                          aria-label={`View ${project.title} Admin`}
-                        >
-                          View Admin
-                        </motion.a>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Description */}
-                  <p className="text-ash-light mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  {/* Modules/Features */}
-                  {project.modules && project.modules.length > 0 && (
-                    <div className="mb-6">
-                      <h4 className="text-yellow text-sm font-semibold mb-3 uppercase tracking-wider">
-                        Key Modules Delivered:
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {project.modules.map((module, idx) => (
-                          <motion.span
-                            key={idx}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: idx * 0.05 }}
-                            whileHover={{
-                              scale: 1.05,
-                              color: "#ffd700",
-                              borderColor: "#ffd700",
-                            }}
-                            className="px-3 py-1.5 rounded-lg bg-black/50 border border-ash/30 text-ash text-xs font-medium transition-all duration-300 cursor-default hover:border-yellow/50 hover:bg-yellow/5"
-                          >
-                            {module}
-                          </motion.span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Technologies */}
-                  {project.technologies && project.technologies.length > 0 && (
-                    <div className="mt-auto pt-4 border-t border-ash/20">
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech, idx) => (
-                          <span
-                            key={idx}
-                            className="px-3 py-1 rounded-md bg-yellow/10 border border-yellow/20 text-yellow text-xs font-medium"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </motion.div>
+          {(activeTab === "web" ? webProjects : mobileProjects).map((project) => (
+            <ProjectCard3D key={project.id} project={project} />
           ))}
         </motion.div>
       </div>
     </section>
   );
 };
+
+const ProjectCard3D = ({ project }) => {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const mouseXSpring = useSpring(x);
+  const mouseYSpring = useSpring(y);
+
+  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["7deg", "-7deg"]);
+  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-7deg", "7deg"]);
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+    const xPct = mouseX / width - 0.5;
+    const yPct = mouseY / height - 0.5;
+    x.set(xPct);
+    y.set(yPct);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5 }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        rotateX,
+        rotateY,
+        transformStyle: "preserve-3d",
+      }}
+      className="bg-dark-gray/80 backdrop-blur-sm border border-ash/20 rounded-2xl overflow-hidden transition-all duration-300 hover:border-yellow/50 hover:shadow-2xl hover:shadow-yellow/20 group perspective-1000 mb-8"
+    >
+      <div className="flex flex-col lg:flex-row h-full transform-style-3d">
+        {/* Image Section */}
+        <div
+          className={`lg:w-1/3 h-64 lg:h-auto relative overflow-hidden flex items-center justify-center ${
+            project.status === "in-progress"
+              ? "bg-gradient-to-br from-yellow/10 via-dark-gray to-black"
+              : "bg-gradient-to-br from-dark-gray to-black"
+          }`}
+          style={{ transform: "translateZ(20px)" }}
+        >
+          {project.image ? (
+            <motion.img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-full object-contain p-8 transform transition-transform duration-500 group-hover:scale-110"
+              style={{ transform: "translateZ(40px)" }}
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <div className="text-center p-8">
+                <div className="text-6xl mb-4 opacity-50 flex items-center justify-center gap-2">
+                  {project.type === "mobile" ? (
+                    "📱"
+                  ) : project.type === "web-mobile" ? (
+                    <>
+                      <span>📱</span>
+                      <span>💻</span>
+                    </>
+                  ) : (
+                    "💻"
+                  )}
+                </div>
+                <p className="text-ash text-sm uppercase tracking-wider">
+                  {project.title}
+                </p>
+              </div>
+            </div>
+          )}
+          {/* Overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        </div>
+
+        {/* Content Section */}
+        <div 
+            className="lg:w-2/3 p-6 lg:p-8 flex flex-col bg-dark-gray/95"
+            style={{ transform: "translateZ(30px)" }}
+        >
+          {/* Header */}
+          <div className="mb-6">
+            <div className="mb-4">
+              <div className="flex items-center gap-3 flex-wrap mb-1">
+                <h3 className="text-2xl sm:text-3xl font-bold text-yellow">
+                  {project.title}
+                </h3>
+                {project.status === "in-progress" && (
+                  <span className="px-2 py-1 text-xs font-semibold bg-yellow/20 border border-yellow/30 text-yellow rounded-md">
+                    In Progress
+                  </span>
+                )}
+              </div>
+              <p className="text-ash-light text-sm font-medium mb-1">
+                {project.role}
+              </p>
+              <p className="text-ash text-sm mb-0.5">{project.company}</p>
+                 {project.id === 101 ? (
+                    <div className="flex flex-col gap-2 mt-2">
+                      <PlayStoreBadge />
+                      <p className="text-ash-dark text-xs flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-yellow/50 animate-pulse" />
+                            App Store In Progress
+                      </p>
+                    </div>
+                ) : (
+                <p className="text-ash-dark text-xs">{project.period}</p>
+                )}
+            </div>
+
+            <div className="flex flex-col gap-3 relative z-20">
+              {project.link && project.link !== "#" && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full px-4 py-3 bg-yellow text-black text-sm font-bold rounded-lg hover:bg-yellow-dark transition-all transform hover:scale-[1.02] text-center uppercase tracking-wider shadow-lg shadow-yellow/10"
+                >
+                  {project.type === "mobile" ? "View Landing Page Website" : "View Website"}
+                </a>
+              )}
+              {project.adminLink && (
+                <a
+                  href={project.adminLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full px-4 py-3 bg-transparent border border-ash text-ash-light text-sm font-bold rounded-lg hover:border-yellow hover:text-yellow transition-all transform hover:scale-[1.02] text-center uppercase tracking-wider"
+                >
+                  View Admin
+                </a>
+              )}
+            </div>
+          </div>
+
+          {/* Description */}
+          <p className="text-ash-light mb-6 leading-relaxed">
+            {project.description}
+          </p>
+
+          {/* Modules/Features */}
+          {project.modules && project.modules.length > 0 && (
+            <div className="mb-6">
+              <h4 className="text-yellow text-sm font-semibold mb-3 uppercase tracking-wider">
+                Key Modules Delivered:
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {project.modules.map((module, idx) => (
+                  <span
+                    key={idx}
+                    className="px-3 py-1.5 rounded-lg bg-black/50 border border-ash/30 text-ash text-xs font-medium transition-colors hover:border-yellow/50 hover:bg-yellow/5"
+                  >
+                    {module}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Technologies */}
+          {project.technologies && project.technologies.length > 0 && (
+            <div className="mt-auto pt-4 border-t border-ash/20">
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map((tech, idx) => (
+                  <span
+                    key={idx}
+                    className="px-3 py-1 rounded-md bg-yellow/10 border border-yellow/20 text-yellow text-xs font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
 
 export default Projects;

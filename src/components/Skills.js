@@ -251,8 +251,18 @@ const Skills = () => {
             <motion.div
               key={key}
               variants={cardVariants}
+              animate={{
+                y: [0, -10, 0],
+              }}
+              transition={{
+                duration: Math.random() * 2 + 3,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+                delay: Math.random() * 2,
+              }}
               whileHover={{
-                y: -10,
+                y: -15,
                 scale: 1.02,
                 transition: { duration: 0.3 },
               }}

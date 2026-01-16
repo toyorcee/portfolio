@@ -353,14 +353,16 @@ const Contact = () => {
                 >
                   Name
                 </label>
-                <input
+                <motion.input
+                  whileFocus={{ scale: 1.02, borderColor: "#ffd700", backgroundColor: "rgba(255, 215, 0, 0.05)" }}
+                  transition={{ duration: 0.2 }}
                   type="text"
                   id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-dark-gray border border-ash/20 rounded-lg text-white placeholder-ash focus:outline-none focus:border-yellow transition-colors"
+                  className="w-full px-4 py-3 bg-dark-gray border border-ash/20 rounded-lg text-white placeholder-ash focus:outline-none transition-colors"
                   placeholder="Your Name"
                 />
               </div>
@@ -372,14 +374,16 @@ const Contact = () => {
                 >
                   Email
                 </label>
-                <input
+                <motion.input
+                  whileFocus={{ scale: 1.02, borderColor: "#ffd700", backgroundColor: "rgba(255, 215, 0, 0.05)" }}
+                  transition={{ duration: 0.2 }}
                   type="email"
                   id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-dark-gray border border-ash/20 rounded-lg text-white placeholder-ash focus:outline-none focus:border-yellow transition-colors"
+                  className="w-full px-4 py-3 bg-dark-gray border border-ash/20 rounded-lg text-white placeholder-ash focus:outline-none transition-colors"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -391,14 +395,16 @@ const Contact = () => {
                 >
                   Message
                 </label>
-                <textarea
+                <motion.textarea
+                  whileFocus={{ scale: 1.02, borderColor: "#ffd700", backgroundColor: "rgba(255, 215, 0, 0.05)" }}
+                  transition={{ duration: 0.2 }}
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="w-full px-4 py-3 bg-dark-gray border border-ash/20 rounded-lg text-white placeholder-ash focus:outline-none focus:border-yellow transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-dark-gray border border-ash/20 rounded-lg text-white placeholder-ash focus:outline-none transition-colors resize-none"
                   placeholder="Your message..."
                 />
               </div>
