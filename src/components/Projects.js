@@ -9,6 +9,13 @@ try {
   elraLogo = null;
 }
 
+let nlseeImage;
+try {
+  nlseeImage = require("../assets/images/NLSEE.png");
+} catch (e) {
+  nlseeImage = null;
+}
+
 let jetoutImage;
 try {
   jetoutImage = require("../assets/images/jetout.jpg");
@@ -180,6 +187,27 @@ const Projects = () => {
   ];
 
   const webProjects = [
+    {
+      id: 8,
+      title: "NLSEE 2026 | Summit & Exhibition",
+      role: "Full Stack Developer",
+      company: "NLSEE",
+      period: "In Progress",
+      description:
+        "The official platform for the NLSEE 2026 Summit & Exhibition. A comprehensive web application handling event information, registration, and attendee management.",
+      modules: [
+        "Event Information & Schedule",
+        "Attendee Registration",
+        "Exhibitor Management",
+        "Speaker Profiles",
+        "Interactive Agenda",
+        "News & Updates",
+      ],
+      technologies: ["React", "Node.js", "MongoDB", "Express.js"],
+      link: "https://nsee.cistechlab.com/",
+      image: nlseeImage,
+      type: "web",
+    },
     {
       id: 1,
       title: "ELRA ERP System",

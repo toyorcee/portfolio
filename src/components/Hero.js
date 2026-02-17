@@ -112,7 +112,7 @@ const Hero = () => {
           </motion.p>
 
           {/* 2. Massive Name */}
-          <div className="relative mb-12">
+          <div className="relative mb-24">
             <motion.h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight flex flex-col items-center gap-2 font-sans"
               variants={containerVariants}
