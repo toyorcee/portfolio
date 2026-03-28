@@ -252,7 +252,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-6 justify-center w-full"
           >
             <motion.a
-              href="/OlaniyanOluwatoyosi – Resume.pdf"
+              href="/latestresume.pdf"
               download
               whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(59, 130, 246, 0.4)" }}
               whileTap={{ scale: 0.95 }}

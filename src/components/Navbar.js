@@ -57,7 +57,7 @@ const Navbar = () => {
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
-    { name: "Resume", href: "/OlaniyanOluwatoyosi – Resume.pdf", isExternal: true },
+    { name: "Resume", href: "/latestresume.pdf", isExternal: true },
   ];
 
   const scrollToSection = (href) => {
