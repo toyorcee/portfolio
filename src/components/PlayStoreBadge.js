@@ -13,7 +13,7 @@ const PlayStoreBadge = ({ className }) => {
     >
       <svg
         viewBox="0 0 24 24"
-        className="w-6 h-6 fill-current text-white group-hover:text-yellow transition-colors duration-300"
+        className="w-6 h-6 fill-current text-white group-hover:text-blue transition-colors duration-300"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path d="M3.609 1.814L13.792 12 3.61 22.186a1.006 1.006 0 01-.61-.92V2.734a1 1 0 01.609-.92zm11.583 11.582L4.996 23.591l12.16-6.848-1.964-3.347zm1.365-1.365l2.256 3.84 3.033-1.706c.866-.488.866-1.964 0-2.452l-3.033-1.707-2.256 3.841-2.256-1.5zM15.192 10.604L5.003.408l12.153 6.847 1.964-3.346-3.928 6.695z" />
@@ -22,7 +22,7 @@ const PlayStoreBadge = ({ className }) => {
         <span className="text-[10px] text-ash-light uppercase font-medium tracking-wider">
           Get it on
         </span>
-        <span className="text-sm font-bold text-white group-hover:text-yellow transition-colors duration-300">
+        <span className="text-sm font-bold text-white group-hover:text-blue transition-colors duration-300">
           Google Play
         </span>
       </div>

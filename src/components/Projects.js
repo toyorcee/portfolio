@@ -1,85 +1,18 @@
 import { useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import PlayStoreBadge from "./PlayStoreBadge";
-
-let elraLogo;
-try {
-  elraLogo = require("../assets/images/elra-logo.png");
-} catch (e) {
-  elraLogo = null;
-}
-
-let nlseeImage;
-try {
-  nlseeImage = require("../assets/images/NLSEE.png");
-} catch (e) {
-  nlseeImage = null;
-}
-
-let jetoutImage;
-try {
-  jetoutImage = require("../assets/images/jetout.jpg");
-} catch (e) {
-  jetoutImage = null;
-}
-
-let zamaniLogo;
-try {
-  zamaniLogo = require("../assets/images/zamani-logo.png");
-} catch (e) {
-  zamaniLogo = null;
-}
-
-let sbmsImage;
-try {
-  sbmsImage = require("../assets/images/SBMS.jpeg");
-} catch (e) {
-  sbmsImage = null;
-}
-
-let payrollImage;
-try {
-  payrollImage = require("../assets/images/Payroll.jpeg");
-} catch (e) {
-  payrollImage = null;
-}
-
-let sneakersImage;
-try {
-  sneakersImage = require("../assets/images/sneakers.jpg");
-} catch (e) {
-  sneakersImage = null;
-}
-
-let habibistudentImage;
-try {
-  habibistudentImage = require("../assets/images/habibistudent.jfif");
-} catch (e) {
-  habibistudentImage = null;
-}
-
-
-
-let smartInvoiceImage;
-try {
-  smartInvoiceImage = require("../assets/images/smartinvoice.png");
-} catch (e) {
-  smartInvoiceImage = null;
-}
-
-let moprosperImage;
-try {
-  moprosperImage = require("../assets/images/moprosper.png");
-} catch (e) {
-  moprosperImage = null;
-}
-
-let ninthWakaImage;
-try {
-  ninthWakaImage = require("../assets/images/9thwaka.png");
-} catch (e) {
-  ninthWakaImage = null;
-}
+import nlseeImage from "../assets/images/NLSEE.png";
+import jetoutImage from "../assets/images/jetout.jpg";
+import zamaniLogo from "../assets/images/zamani-logo.png";
+import sbmsImage from "../assets/images/SBMS.jpeg";
+import payrollImage from "../assets/images/Payroll.jpeg";
+import sneakersImage from "../assets/images/sneakers.jpg";
+import habibistudentImage from "../assets/images/habibistudent.jfif";
+import smartInvoiceImage from "../assets/images/smartinvoice.png";
+import moprosperImage from "../assets/images/moprosper.png";
+import ninthWakaImage from "../assets/images/9thwaka.png";
+import alertproLogo from "../assets/images/alertpro-logo.svg";
+import elraLogo from "../assets/images/elra-logo.png";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState("web");
@@ -189,50 +122,102 @@ const Projects = () => {
   const webProjects = [
     {
       id: 8,
-      title: "NLSEE 2026 | Summit & Exhibition",
-      role: "Full Stack Developer",
-      company: "NLSEE",
+      title: "NLSEE 2026",
+      role: "Lead Full Stack Developer",
+      company: "National Leasing Summit & Equipment Expo",
       period: "In Progress",
       description:
-        "The official platform for the NLSEE 2026 Summit & Exhibition. A comprehensive web application handling event information, registration, and attendee management.",
+        "A high-performance, full-stack event registration and management platform built for the NLSEE Summit. The platform streamlines registrations for industry leaders, policymakers, and innovators in Nigeria's ₦5.2 trillion equipment economy. Features complex multi-role registration flows, automated invoicing, and digital ticketing with QR code verification.",
       modules: [
-        "Event Information & Schedule",
-        "Attendee Registration",
-        "Exhibitor Management",
-        "Speaker Profiles",
-        "Interactive Agenda",
-        "News & Updates",
+        "Unified Registration (Multi-Role Support & Dynamic Forms)",
+        "Secure Payment Integration (Paystack, Webhooks)",
+        "Digital Ticketing (QR Code & PDF E-Tickets)",
+        "On-site Verification Portal (Ticket Scanning)",
+        "Automated Invoicing & Receipt Generation",
+        "Interactive Countdown & Professional Aesthetic",
       ],
-      technologies: ["React", "Node.js", "MongoDB", "Express.js"],
-      link: "https://nsee.cistechlab.com/",
+      technologies: [
+        "React 19",
+        "Vite",
+        "Tailwind CSS 4",
+        "Node.js",
+        "Express 5",
+        "MongoDB",
+        "Paystack API",
+        "Lucide React",
+        "React Router 7",
+        "jsPDF",
+        "Framer Motion",
+        "aaPanel Hosting",
+        "Bitvise SSH Deployment",
+      ],
+      link: "https://nationalequipmentleasingsummit.com/",
       image: nlseeImage,
       type: "web",
     },
     {
-      id: 1,
-      title: "ELRA ERP System",
-      role: "Full Stack Developer (MERN)",
-      company: "Federal Ministry of Finance (Century Info Systems)",
-      period: "August 4 – September 30, 2025",
+      id: 10,
+      title: "ELRA Vendor Portal",
+      role: "Full Stack Developer",
+      company: "Equipment Leasing Registration Authority (ELRA)",
+      period: "Production Ready",
       description:
-        "Developed a full-scale ERP system for Nigeria's Equipment Leasing Registration Authority (ELRA) under the Federal Ministry of Finance. The platform digitized internal operations, automated compliance tracking, and unified inter-departmental workflows.",
+        "A high-performance government procurement and compliance platform for Nigeria's ELRA. The portal manages the entire vendor ecosystem, from multi-step registration and automated CAC/Tax verification to digital bidding and contract lifecycle management. It ensures transparency and efficiency in government-to-business (G2B) interactions.",
       modules: [
-        "Department Management",
-        "Finance",
-        "HR",
-        "Inventory",
-        "Procurement",
-        "Payroll",
-        "Legal & Compliance",
-        "Projects",
-        "Sales",
-        "Customer Care",
-        "Communication",
-        "System Administration",
+        "Unified Vendor Registration (Individuals & Corporate)",
+        "Automated Compliance & Verification (CAC, Tax Clearance)",
+        "RFQ & Digital Bidding Marketplace",
+        "Contract Lifecycle & Milestone Management",
+        "Centralized Vendor Dashboard & Notifications",
+        "Secure Payment Visibility & Invoice Tracking",
       ],
-      technologies: ["React", "Node.js", "MongoDB", "Express.js", "MERN Stack"],
-      link: "https://elra-erp.onrender.com/",
+      technologies: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Framer Motion",
+        "JWT Security",
+        "FGN Procurement Standards",
+        "aaPanel Hosting",
+        "Bitvise SSH Deployment",
+      ],
+      link: "https://vendors.elra.gov.ng",
       image: elraLogo,
+      type: "web",
+    },
+    {
+      id: 9,
+      title: "Alertpro",
+      role: "Lead Full Stack Developer",
+      company: "Alertpro AI",
+      period: "Active Development",
+      description:
+        "A cutting-edge, real-time intelligence and broadcast platform designed to eliminate the noise of the modern digital landscape. It continuously scans the web, APIs, news feeds, social media, and private data sources to detect high-impact signals and instantly delivers them to users via WhatsApp, SMS, Email, App Push, and In-App feeds.",
+      modules: [
+        "Intelligent Monitoring Engine (Multi-Source Scanning, Custom Alerts, Automated Scrapers)",
+        "Smart AI Filtering (Gemini-powered Noise Reduction, Urgency Scoring)",
+        "Multi-Channel Delivery (WhatsApp, SMS, Email, Push Notifications)",
+        "Wallet & Billing System (Usage-Based Pricing, Integrated Payments)",
+        "Real-Time Tracking (Alert Costs & Wallet Balance)",
+      ],
+      technologies: [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Socket.io",
+        "Firebase (FCM)",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Redis",
+        "Gemini AI",
+        "Node-cron",
+      ],
+      link: "https://alert-pro.onrender.com",
+      image: alertproLogo,
       type: "web",
     },
     {
@@ -296,6 +281,7 @@ const Projects = () => {
         "RESTful APIs",
         "Toastify",
         "Git/GitHub",
+        "Server Deployment & Hosting (aaPanel/VPS)",
       ],
       link: "https://jetoutexperience.com/",
       adminLink: "https://www.jetoutexperience.com/admin/login",
@@ -623,21 +609,21 @@ const Projects = () => {
           className="text-center mb-16"
         >
           <motion.h2
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 relative inline-block"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 relative inline-block mx-auto"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
-            Professional Experience
+            Featured Projects
             <motion.span
-              className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1 bg-yellow -bottom-2"
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1 bg-blue -bottom-2"
               initial={{ width: 0 }}
-              whileInView={{ width: "140px" }}
+              whileInView={{ width: "120px" }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
             />
           </motion.h2>
           <motion.p
-            className="text-ash-light text-lg sm:text-xl max-w-2xl mx-auto"
+            className="text-ash-light text-base sm:text-lg max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -648,26 +634,30 @@ const Projects = () => {
         </motion.div>
 
         <div className="flex justify-center mb-12 space-x-4">
-          <button
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             onClick={() => setActiveTab("web")}
-            className={`px-8 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 ${
+            className={`px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest transition-all duration-300 ${
               activeTab === "web"
-                ? "bg-yellow text-black shadow-lg shadow-yellow/20 scale-105"
-                : "bg-transparent border border-ash/30 text-ash hover:border-yellow/50 hover:text-yellow"
+                ? "bg-blue text-white shadow-lg shadow-blue-500/30"
+                : "bg-transparent text-ash hover:text-blue border border-ash/20"
             }`}
           >
             Websites
-          </button>
-          <button
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             onClick={() => setActiveTab("mobile")}
-            className={`px-8 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 ${
+            className={`px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest transition-all duration-300 ${
               activeTab === "mobile"
-                ? "bg-yellow text-black shadow-lg shadow-yellow/20 scale-105"
-                : "bg-transparent border border-ash/30 text-ash hover:border-yellow/50 hover:text-yellow"
+                ? "bg-blue text-white shadow-lg shadow-blue-500/30"
+                : "bg-transparent text-ash hover:text-blue border border-ash/20"
             }`}
           >
             Mobile Apps
-          </button>
+          </motion.button>
         </div>
 
         <motion.div
@@ -727,14 +717,17 @@ const ProjectCard3D = ({ project }) => {
         rotateY,
         transformStyle: "preserve-3d",
       }}
-      className="bg-dark-gray/80 backdrop-blur-sm border border-ash/20 rounded-2xl overflow-hidden transition-all duration-300 hover:border-yellow/50 hover:shadow-2xl hover:shadow-yellow/20 group perspective-1000 mb-8"
+      className="w-full bg-black/60 backdrop-blur-xl border border-white/10 rounded-3xl p-8 h-full transition-all duration-700 hover:border-blue-500/30 group relative overflow-hidden flex flex-col items-center justify-center text-center"
     >
+      {/* Animated Highlight */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
       <div className="flex flex-col lg:flex-row h-full transform-style-3d">
         {/* Image Section */}
         <div
           className={`lg:w-1/3 h-64 lg:h-auto relative overflow-hidden flex items-center justify-center ${
             project.status === "in-progress"
-              ? "bg-gradient-to-br from-yellow/10 via-dark-gray to-black"
+              ? "bg-gradient-to-br from-blue/10 via-dark-gray to-black"
               : "bg-gradient-to-br from-dark-gray to-black"
           }`}
           style={{ transform: "translateZ(20px)" }}
@@ -780,11 +773,11 @@ const ProjectCard3D = ({ project }) => {
           <div className="mb-6">
             <div className="mb-4">
               <div className="flex items-center gap-3 flex-wrap mb-1">
-                <h3 className="text-2xl sm:text-3xl font-bold text-yellow">
+                <h3 className="text-2xl sm:text-3xl font-bold text-blue">
                   {project.title}
                 </h3>
                 {project.status === "in-progress" && (
-                  <span className="px-2 py-1 text-xs font-semibold bg-yellow/20 border border-yellow/30 text-yellow rounded-md">
+                  <span className="px-2 py-1 text-xs font-semibold bg-blue/20 border border-blue/30 text-blue rounded-md">
                     In Progress
                   </span>
                 )}
@@ -797,7 +790,7 @@ const ProjectCard3D = ({ project }) => {
                     <div className="flex flex-col gap-2 mt-2">
                       <PlayStoreBadge />
                       <p className="text-ash-dark text-xs flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-yellow/50 animate-pulse" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue/50 animate-pulse" />
                             App Store In Progress
                       </p>
                     </div>
@@ -808,21 +801,25 @@ const ProjectCard3D = ({ project }) => {
 
             <div className="flex flex-col gap-3 relative z-20">
               {project.link && project.link !== "#" && (
-                <a
+                <motion.a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full px-4 py-3 bg-yellow text-black text-sm font-bold rounded-lg hover:bg-yellow-dark transition-all transform hover:scale-[1.02] text-center uppercase tracking-wider shadow-lg shadow-yellow/10"
+                  whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(59, 130, 246, 0.4)" }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full py-4 rounded-xl bg-blue text-white font-bold uppercase tracking-widest text-sm shadow-xl shadow-blue-600/30 flex items-center justify-center gap-2 group/btn relative overflow-hidden"
                 >
-                  {project.type === "mobile" ? "View Landing Page Website" : "View Website"}
-                </a>
+                  <span className="relative z-10">{project.type === "mobile" ? "View Landing Page Website" : "View Website"}</span>
+                  <span className="relative z-10 group-hover/btn:translate-x-1 transition-transform duration-300 text-lg">↗</span>
+                  <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+                </motion.a>
               )}
               {project.adminLink && (
                 <a
                   href={project.adminLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full px-4 py-3 bg-transparent border border-ash text-ash-light text-sm font-bold rounded-lg hover:border-yellow hover:text-yellow transition-all transform hover:scale-[1.02] text-center uppercase tracking-wider"
+                  className="block w-full px-4 py-3 bg-transparent border border-ash text-ash-light text-sm font-bold rounded-lg hover:border-blue hover:text-blue transition-all transform hover:scale-[1.02] text-center uppercase tracking-wider"
                 >
                   View Admin
                 </a>
@@ -838,14 +835,14 @@ const ProjectCard3D = ({ project }) => {
           {/* Modules/Features */}
           {project.modules && project.modules.length > 0 && (
             <div className="mb-6">
-              <h4 className="text-yellow text-sm font-semibold mb-3 uppercase tracking-wider">
+              <h4 className="text-blue text-sm font-semibold mb-3 uppercase tracking-wider">
                 Key Modules Delivered:
               </h4>
               <div className="flex flex-wrap gap-2">
                 {project.modules.map((module, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1.5 rounded-lg bg-black/50 border border-ash/30 text-ash text-xs font-medium transition-colors hover:border-yellow/50 hover:bg-yellow/5"
+                    className="px-3 py-1.5 rounded-lg bg-black/50 border border-ash/30 text-ash text-xs font-medium transition-colors hover:border-blue-500/50 hover:bg-blue-600/5"
                   >
                     {module}
                   </span>
@@ -861,7 +858,7 @@ const ProjectCard3D = ({ project }) => {
                 {project.technologies.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 rounded-md bg-yellow/10 border border-yellow/20 text-yellow text-xs font-medium"
+                    className="px-3 py-1 rounded-md bg-blue/10 border border-blue/20 text-blue text-xs font-medium"
                   >
                     {tech}
                   </span>

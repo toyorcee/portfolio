@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+  </defs>
+
+  <!-- Inkwell -->
+  <path
+    d="M20 75 L30 65 H70 L80 75 V85 H20 V75 Z"
+    fill="#1a1a1a"
+    stroke="#3b82f6"
+    stroke-width="2"
+  />
+  <path
+    d="M40 65 V60 C40 58 42 56 45 56 H55 C58 56 60 58 60 60 V65"
+    stroke="#3b82f6"
+    stroke-width="2"
+    fill="none"
+  />
+
+  <!-- Fountain Pen -->
+  <path
+    d="M65 20 L80 35 L45 70 L30 75 L35 60 L65 20 Z"
+    fill="url(#logoGradient)"
+  />
+  <path
+    d="M30 75 L35 70"
+    stroke="white"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+  
+  <!-- Ink stroke -->
+  <path
+    d="M25 80 Q 50 95 75 80"
+    stroke="#3b82f6"
+    stroke-width="1.5"
+    fill="none"
+    stroke-dasharray="4 4"
+  />
+</svg>

@@ -124,7 +124,7 @@ const Contact = () => {
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute w-96 h-96 bg-yellow/5 rounded-full blur-3xl top-1/4 left-1/4"
+          className="absolute w-96 h-96 bg-blue-600/10 rounded-full blur-3xl top-1/4 left-1/4"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.6, 0.3],
@@ -136,7 +136,7 @@ const Contact = () => {
           }}
         />
         <motion.div
-          className="absolute w-96 h-96 bg-yellow/5 rounded-full blur-3xl bottom-1/4 right-1/4"
+          className="absolute w-96 h-96 bg-blue-600/10 rounded-full blur-3xl bottom-1/4 right-1/4"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -158,15 +158,15 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <motion.h2
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 relative inline-block"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 relative inline-block"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
             Get In Touch
             <motion.span
-              className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1 bg-yellow -bottom-2"
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1 bg-blue -bottom-2"
               initial={{ width: 0 }}
-              whileInView={{ width: "100px" }}
+              whileInView={{ width: "120px" }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
             />
@@ -192,7 +192,7 @@ const Contact = () => {
           {/* Contact Info */}
           <motion.div variants={itemVariants} className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-yellow mb-6">
+              <h3 className="text-2xl sm:text-3xl font-bold text-blue mb-6">
                 Contact Information
               </h3>
               <div className="space-y-4">
@@ -209,7 +209,7 @@ const Contact = () => {
                       {info.link ? (
                         <a
                           href={info.link}
-                          className="text-ash-light hover:text-yellow transition-colors"
+                          className="text-ash-light hover:text-blue transition-colors"
                         >
                           {info.value}
                         </a>
@@ -219,7 +219,7 @@ const Contact = () => {
                             <React.Fragment key={phoneIndex}>
                               <a
                                 href={phone.link}
-                                className="text-ash-light hover:text-yellow transition-colors"
+                                className="text-ash-light hover:text-blue transition-colors"
                               >
                                 {phone.number}
                               </a>
@@ -240,7 +240,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div>
-              <h3 className="text-2xl font-bold text-yellow mb-6">
+              <h3 className="text-2xl sm:text-3xl font-bold text-blue mb-6">
                 Connect With Me
               </h3>
               <div className="flex gap-4">
@@ -354,7 +354,7 @@ const Contact = () => {
                   Name
                 </label>
                 <motion.input
-                  whileFocus={{ scale: 1.02, borderColor: "#ffd700", backgroundColor: "rgba(255, 215, 0, 0.05)" }}
+                  whileFocus={{ scale: 1.02, borderColor: "#3b82f6", backgroundColor: "rgba(59, 130, 246, 0.05)" }}
                   transition={{ duration: 0.2 }}
                   type="text"
                   id="name"
@@ -375,7 +375,7 @@ const Contact = () => {
                   Email
                 </label>
                 <motion.input
-                  whileFocus={{ scale: 1.02, borderColor: "#ffd700", backgroundColor: "rgba(255, 215, 0, 0.05)" }}
+                  whileFocus={{ scale: 1.02, borderColor: "#3b82f6", backgroundColor: "rgba(59, 130, 246, 0.05)" }}
                   transition={{ duration: 0.2 }}
                   type="email"
                   id="email"
@@ -396,7 +396,7 @@ const Contact = () => {
                   Message
                 </label>
                 <motion.textarea
-                  whileFocus={{ scale: 1.02, borderColor: "#ffd700", backgroundColor: "rgba(255, 215, 0, 0.05)" }}
+                  whileFocus={{ scale: 1.02, borderColor: "#3b82f6", backgroundColor: "rgba(59, 130, 246, 0.05)" }}
                   transition={{ duration: 0.2 }}
                   id="message"
                   name="message"
@@ -411,9 +411,9 @@ const Contact = () => {
 
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(59, 130, 246, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full px-6 py-3 bg-yellow text-black font-semibold rounded-lg hover:bg-yellow-dark transition-colors"
+                className="w-full px-6 py-4 bg-blue text-white font-bold rounded-xl hover:bg-blue-dark transition-all uppercase tracking-widest shadow-lg shadow-blue-500/20"
               >
                 Send Message
               </motion.button>

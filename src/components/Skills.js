@@ -85,6 +85,8 @@ const Skills = () => {
         "GitHub Actions",
         "Contabo",
         "aaPanel",
+        "Bitvise SSH",
+        "Server Management (VPS)",
         "CPanel",
       ],
     },
@@ -180,7 +182,7 @@ const Skills = () => {
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute w-96 h-96 bg-yellow/5 rounded-full blur-3xl top-0 left-0"
+          className="absolute w-96 h-96 bg-blue-600/5 rounded-full blur-3xl top-0 left-0"
           animate={{
             x: [0, 100, 0],
             y: [0, 50, 0],
@@ -193,7 +195,7 @@ const Skills = () => {
           }}
         />
         <motion.div
-          className="absolute w-96 h-96 bg-yellow/5 rounded-full blur-3xl bottom-0 right-0"
+          className="absolute w-96 h-96 bg-blue-600/5 rounded-full blur-3xl bottom-0 right-0"
           animate={{
             x: [0, -100, 0],
             y: [0, -50, 0],
@@ -216,15 +218,15 @@ const Skills = () => {
           className="text-center mb-16"
         >
           <motion.h2
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 relative inline-block"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 relative inline-block"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
             Technical Skills
             <motion.span
-              className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1 bg-yellow -bottom-2"
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1 bg-blue -bottom-2"
               initial={{ width: 0 }}
-              whileInView={{ width: "80px" }}
+              whileInView={{ width: "120px" }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
             />
@@ -266,16 +268,16 @@ const Skills = () => {
                 scale: 1.02,
                 transition: { duration: 0.3 },
               }}
-              className="bg-black/50 backdrop-blur-sm border border-ash/20 rounded-xl p-6 transition-all duration-300 hover:border-yellow/50 hover:shadow-2xl hover:shadow-yellow/20 relative overflow-hidden group"
+              className="bg-black/50 backdrop-blur-sm border border-ash/20 rounded-xl p-6 transition-all duration-300 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 relative overflow-hidden group"
             >
               {/* Glow effect on hover */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-yellow/0 to-yellow/0 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+                className="absolute inset-0 bg-gradient-to-br from-blue-600/0 to-blue-600/0 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"
                 initial={false}
               />
 
               <motion.h3
-                className="text-xl sm:text-2xl font-bold text-yellow mb-6 pb-4 border-b border-ash/20 relative z-10"
+                className="text-xl sm:text-2xl font-bold text-blue mb-6 pb-4 border-b border-ash/20 relative z-10"
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
@@ -302,17 +304,17 @@ const Skills = () => {
                     variants={skillItemVariants}
                     whileHover={{
                       scale: 1.1,
-                      color: "#ffd700",
-                      borderColor: "#ffd700",
-                      backgroundColor: "rgba(255, 215, 0, 0.1)",
+                      color: "#3b82f6",
+                      borderColor: "#3b82f6",
+                      backgroundColor: "rgba(59, 130, 246, 0.1)",
                       y: -2,
                     }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-4 py-2 rounded-lg bg-dark-gray border border-ash/30 text-ash text-sm font-medium transition-all duration-300 cursor-pointer hover:border-yellow/50 hover:bg-yellow/5 relative overflow-hidden group"
+                    className="px-4 py-2 rounded-lg bg-dark-gray border border-ash/30 text-ash text-sm font-medium transition-all duration-300 cursor-pointer hover:border-blue-500/50 hover:bg-blue-600/5 relative overflow-hidden group"
                   >
                     {/* Shine effect on hover */}
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow/20 to-transparent"
+                      className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-400/20 to-transparent"
                       initial={{ x: "-100%" }}
                       whileHover={{ x: "100%" }}
                       transition={{ duration: 0.6 }}

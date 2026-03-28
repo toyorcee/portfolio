@@ -93,7 +93,7 @@ const Hero = () => {
         className="absolute inset-0 w-full h-full"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-black via-dark-gray to-black z-0" />
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-yellow/10 via-black to-black opacity-40" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-600/20 via-black to-black opacity-40" />
       </motion.div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
@@ -134,11 +134,11 @@ const Hero = () => {
                   <motion.span
                     key={i}
                     variants={letterVariants}
-                    className="inline-block hover:text-yellow transition-colors duration-300 cursor-default"
+                    className="inline-block hover:text-blue transition-colors duration-300 cursor-default"
                     whileHover={{
                       scale: 1.1,
                       y: -10,
-                      color: "#ffd700",
+                      color: "#3b82f6",
                     }}
                   >
                     {char}
@@ -160,11 +160,11 @@ const Hero = () => {
                   <motion.span
                     key={i}
                     variants={letterVariants}
-                    className="inline-block hover:text-yellow transition-colors duration-300 cursor-default"
+                    className="inline-block hover:text-blue transition-colors duration-300 cursor-default"
                     whileHover={{
                       scale: 1.1,
                       y: -10,
-                      color: "#ffd700",
+                      color: "#3b82f6",
                     }}
                   >
                     {char}
@@ -195,9 +195,10 @@ const Hero = () => {
               className="w-full h-full relative"
             >
               {/* Glow behind */}
-              <div className="absolute inset-0 bg-yellow/20 rounded-full blur-[60px] transform translate-z-[-20px]" />
+              <div className="absolute inset-0 bg-blue-600/30 rounded-full blur-[80px] transform translate-z-[-20px]" />
+              <div className="absolute inset-0 bg-cyan-400/10 rounded-full blur-[100px] transform translate-z-[-40px] animate-pulse" />
 
-              <div className="w-full h-full rounded-full overflow-hidden border-4 border-white/10 relative shadow-2xl shadow-yellow/10 bg-dark-gray">
+              <div className="w-full h-full rounded-full overflow-hidden border-4 border-white/10 relative shadow-2xl shadow-blue-500/20 bg-dark-gray">
                 {profileImage ? (
                   <img
                     src={profileImage}
@@ -217,7 +218,7 @@ const Hero = () => {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                className="absolute -inset-4 border border-yellow/20 rounded-full border-dashed"
+                className="absolute -inset-4 border border-blue-500/20 rounded-full border-dashed"
               />
               <motion.div
                 animate={{ rotate: -360 }}
@@ -231,7 +232,7 @@ const Hero = () => {
           {/* 4. Role & Description */}
           <motion.h2
             variants={itemVariants}
-            className="text-2xl sm:text-3xl md:text-4xl text-yellow mb-6 font-semibold tracking-wide"
+            className="text-2xl sm:text-3xl md:text-5xl text-blue mb-6 font-bold tracking-tight px-4"
           >
             Full Stack MERN Developer
           </motion.h2>
@@ -251,17 +252,18 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-6 justify-center w-full"
           >
             <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(255, 215, 0, 0.4)" }}
+              href="/OlaniyanOluwatoyosi – Resume.pdf"
+              download
+              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(59, 130, 246, 0.4)" }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-4 rounded-full font-bold text-sm uppercase tracking-widest text-center bg-yellow text-black shadow-lg shadow-yellow/20 relative overflow-hidden group w-full sm:w-auto min-w-[200px]"
+              className="px-10 py-4 rounded-full font-bold text-sm uppercase tracking-widest text-center bg-blue text-white shadow-lg shadow-blue-500/20 relative overflow-hidden group w-full sm:w-auto min-w-[200px]"
             >
-              <span className="relative z-10">Get In Touch</span>
-              <div className="absolute inset-0 bg-white/30 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out" />
+              <span className="relative z-10 font-bold">Download CV</span>
+              <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out" />
             </motion.a>
             <motion.a
               href="#projects"
-              whileHover={{ scale: 1.05, borderColor: "#ffd700", color: "#ffd700", backgroundColor: "rgba(255, 215, 0, 0.05)" }}
+              whileHover={{ scale: 1.05, borderColor: "#3b82f6", color: "#3b82f6", backgroundColor: "rgba(59, 130, 246, 0.05)" }}
               whileTap={{ scale: 0.95 }}
               className="px-10 py-4 rounded-full font-bold text-sm uppercase tracking-widest text-center bg-transparent text-ash border border-ash/50 transition-all duration-300 w-full sm:w-auto min-w-[200px]"
             >

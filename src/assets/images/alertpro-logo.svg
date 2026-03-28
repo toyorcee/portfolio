@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9" />
+      <stop offset="50%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#DB2777" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Shield -->
+  <path
+    d="M50 5 L85 20 V50 C85 75 50 95 50 95 C50 95 15 75 15 50 V20 L50 5 Z"
+    stroke="url(#brandGradient)"
+    stroke-width="3"
+    fill="none"
+  />
+
+  <!-- Inner Circle -->
+  <circle cx="50" cy="50" r="12" fill="url(#brandGradient)" />
+
+  <!-- Bell Icon -->
+  <path
+    d="M50 42 C52.2 42 54 43.8 54 46 V52 L56 54 V55 H44 V54 L46 52 V46 C46 43.8 47.8 42 50 42 Z M50 58 C48.9 58 48 57.1 48 56 H52 C52 57.1 51.1 58 50 58 Z"
+    fill="white"
+  />
+</svg>

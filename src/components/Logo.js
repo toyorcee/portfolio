@@ -1,12 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-let portfolioLogo;
-try {
-  portfolioLogo = require("../assets/images/logo.png");
-} catch (e) {
-  portfolioLogo = null;
-}
+// Import the new SVG logo
+import portfolioLogo from "../assets/images/portfolio-logo.svg";
 
 const Logo = ({ className = "", size = "md" }) => {
   const sizeClasses = {
@@ -21,19 +17,13 @@ const Logo = ({ className = "", size = "md" }) => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
-      {portfolioLogo ? (
+      <div className={`${sizeClasses[size]} rounded-full bg-blue/10 flex items-center justify-center border-2 border-blue-500/30 overflow-hidden`}>
         <img
           src={portfolioLogo}
           alt="Portfolio Logo"
-          className={`${sizeClasses[size]} rounded-full object-cover border-2 border-yellow/30`}
+          className="w-full h-full object-contain p-1"
         />
-      ) : (
-        <div
-          className={`${sizeClasses[size]} rounded-full bg-gradient-to-br from-yellow to-yellow-dark flex items-center justify-center`}
-        >
-          <span className="text-black font-bold text-sm">OO</span>
-        </div>
-      )}
+      </div>
     </motion.div>
   );
 };

@@ -10,7 +10,7 @@ import ScrollProgress from "./components/ScrollProgress";
 
 function App() {
   return (
-    <div className="min-h-screen bg-black text-white relative selection:bg-yellow selection:text-black">
+    <div className="min-h-screen bg-black text-white relative selection:bg-blue-600 selection:text-white">
       <Background />
       <ScrollProgress />
       <div className="relative z-10">

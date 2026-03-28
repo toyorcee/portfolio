@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "./Logo";
 
-const MagneticLink = ({ children, href, onClick }) => {
+const MagneticLink = ({ children, href, onClick, ...props }) => {
   const ref = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -30,10 +30,11 @@ const MagneticLink = ({ children, href, onClick }) => {
       <a
         href={href}
         onClick={onClick}
-        className="text-ash hover:text-yellow transition-colors duration-300 font-medium text-sm uppercase tracking-wider relative group px-2 py-1 block"
+        {...props}
+        className="text-ash hover:text-blue transition-colors duration-300 font-medium text-sm uppercase tracking-wider relative group px-2 py-1 block"
       >
         {children}
-        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow transition-all duration-300 group-hover:w-full"></span>
+        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue transition-all duration-300 group-hover:w-full"></span>
       </a>
     </motion.li>
   );
@@ -56,6 +57,7 @@ const Navbar = () => {
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
+    { name: "Resume", href: "/OlaniyanOluwatoyosi – Resume.pdf", isExternal: true },
   ];
 
   const scrollToSection = (href) => {
@@ -87,9 +89,13 @@ const Navbar = () => {
               key={link.name}
               href={link.href}
               onClick={(e) => {
-                e.preventDefault();
-                scrollToSection(link.href);
+                if (!link.isExternal) {
+                  e.preventDefault();
+                  scrollToSection(link.href);
+                }
               }}
+              target={link.isExternal ? "_blank" : undefined}
+              rel={link.isExternal ? "noopener noreferrer" : undefined}
             >
               {link.name}
             </MagneticLink>
@@ -106,7 +112,7 @@ const Navbar = () => {
             animate={{
               rotate: isMobileMenuOpen ? 45 : 0,
               y: isMobileMenuOpen ? 8 : 0,
-              backgroundColor: isMobileMenuOpen ? "#ffd700" : "#ffffff"
+              backgroundColor: isMobileMenuOpen ? "#3b82f6" : "#ffffff"
             }}
             className="w-8 h-0.5 bg-white transition-colors duration-300"
           />
@@ -121,7 +127,7 @@ const Navbar = () => {
             animate={{
               rotate: isMobileMenuOpen ? -45 : 0,
               y: isMobileMenuOpen ? -8 : 0,
-              backgroundColor: isMobileMenuOpen ? "#ffd700" : "#ffffff"
+              backgroundColor: isMobileMenuOpen ? "#3b82f6" : "#ffffff"
             }}
             className="w-8 h-0.5 bg-white transition-colors duration-300"
           />
@@ -139,25 +145,31 @@ const Navbar = () => {
             className="md:hidden fixed inset-0 bg-black flex flex-col items-center justify-center gap-8 z-40"
           >
              {/* Background decoration */}
-             <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-yellow/5 rounded-full blur-3xl" />
-                <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-yellow/5 rounded-full blur-3xl" />
-             </div>
+              <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl" />
+                <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl" />
+              </div>
 
             {navLinks.map((link, index) => (
               <motion.a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(link.href);
+                  if (!link.isExternal) {
+                    e.preventDefault();
+                    scrollToSection(link.href);
+                  } else {
+                    setIsMobileMenuOpen(false);
+                  }
                 }}
+                target={link.isExternal ? "_blank" : undefined}
+                rel={link.isExternal ? "noopener noreferrer" : undefined}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 + index * 0.1 }}
-                whileHover={{ scale: 1.2, color: "#ffd700" }}
+                whileHover={{ scale: 1.2, color: "#3b82f6" }}
                 whileTap={{ scale: 0.9 }}
-                className="text-ash hover:text-yellow text-2xl font-bold uppercase tracking-widest relative z-10"
+                className="text-ash hover:text-blue text-2xl font-bold uppercase tracking-widest relative z-10"
               >
                 {link.name}
               </motion.a>

@@ -28,7 +28,7 @@ const Footer = () => {
         whileInView={{ opacity: 1, y: 0 }}
         whileHover={{ y: -5, scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="absolute bottom-8 right-8 w-12 h-12 bg-yellow text-black rounded-full flex items-center justify-center shadow-lg shadow-yellow/20 font-bold text-xl hover:bg-yellow-dark transition-colors"
+        className="absolute bottom-8 right-8 w-12 h-12 bg-blue text-black rounded-full flex items-center justify-center shadow-lg shadow-blue/20 font-bold text-xl hover:bg-blue-dark transition-colors"
       >
         ↑
       </motion.button>

@@ -14,33 +14,75 @@
 
 ## Professional Summary
 
-Innovative and results-driven Full Stack MERN Developer with over 4 years of experience designing, developing, and deploying responsive web and mobile applications. Proven expertise in building scalable enterprise solutions, e-commerce platforms, financial systems, and educational platforms. Specialized in React, Node.js, MongoDB, and Express.js with a strong focus on performance optimization, user experience, and modern UI/UX design.
+Senior Full Stack MERN Developer with over 4 years of experience delivering high-performance enterprise and government-scale solutions. Expert in architecting secure G2B platforms, including the Federal Ministry of Finance (ELRA) Vendor Portal and the NLSEE 2026 Summit ecosystem for Nigeria's ₦5.2 Trillion equipment leasing sector. 
+
+Specialized in building scalable architectures, integrating secure financial pipelines (Paystack/HMAC), and managing full-cycle DevOps infrastructure via VPS/aaPanel. A results-oriented leader with a proven track record of reducing system latency by 50% and increasing user engagement by 25% through UX-centric engineering and technical mentorship.
 
 ---
 
 ## Professional Experience
 
-### Full Stack Developer (MERN)
-**ELRA ERP System** | Federal Ministry of Finance (Century Info Systems)  
-*August 2024 – September 2024*
+### Lead Full Stack Developer
+**NLSEE 2026** | National Leasing Summit & Equipment Expo  
+*January 2026 – March 2026*
 
-Developed a full-scale ERP system for Nigeria's Equipment Leasing Registration Authority (ELRA) under the Federal Ministry of Finance. The platform digitized internal operations, automated compliance tracking, and unified inter-departmental workflows.
+**Project Context:** Engineered the primary digital infrastructure for Nigeria’s premier Equipment Leasing Summit, orchestrating complex high-value registrations for a **₦5.2 Trillion** national economy sector.
 
 **Key Achievements:**
-- Built 12 comprehensive modules including Department Management, Finance, HR, Inventory, Procurement, Payroll, Legal & Compliance, Projects, Sales, Customer Care, Communication, and System Administration
-- Implemented robust backend architecture using Node.js and Express.js with MongoDB
-- Developed responsive frontend interfaces using React with modern UI/UX principles
-- Ensured seamless integration between multiple departments and modules
+- **Architected a Sophisticated Multi-Tier Registration Engine** designed to handle diverse stakeholder workflows (Government, Corporate, and Individual), featuring dynamic validation logic and state-persistent form architectures.
+- **Deployed a Secure Digital Ticketing & Real-Time QR Verification Ecosystem**, including automated PDF e-ticket generation via **jsPDF** and a high-velocity **On-site Verification Portal** for instant security clearance.
+- **Orchestrated an Automated Financial Pipeline** integrating the **Paystack API** with robust **Webhook listeners**, delivering a 100% automated invoicing and workflow with zero-reconciliation overhead.
+- **Engineered a Dedicated Field-Scanning Hub** for summit staff, significantly reducing physical bottlenecks and attendee wait times through high-performance mobile-optimized verification tools.
+- **Developed a Premium, High-Retention UI/UX** using **React 19** and **Tailwind CSS 4**, ensuring a state-of-the-art interactive experience for industry policymakers and high-net-worth investors.
 
-**Technologies:** React, Node.js, MongoDB, Express.js, MERN Stack
+**Technologies:** React 19, Vite, Tailwind CSS 4, Node.js, Express 5, MongoDB, Paystack API, jsPDF, QRCode, Framer Motion, aaPanel, Bitvise SSH, VPS Hosting
 
-**Live Link:** [elra-erp.onrender.com](https://elra-erp.onrender.com/)
+**Live Link:** [nationalequipmentleasingsummit.com](https://nationalequipmentleasingsummit.com/)
+
+---
+
+### Full Stack Developer
+**ELRA Vendor Portal** | Equipment Leasing Registration Authority (ELRA)  
+*February 2026 – March 2026*
+
+**Project Context:** Engineered a mission-critical Government-to-Business (G2B) ecosystem for the Equipment Leasing Registration Authority (ELRA), automating procurement and compliance for national vendors.
+
+**Key Achievements:**
+- **Architected a Unified Vendor Onboarding System**, supporting multi-tiered registration for Individual and Corporate entities, featuring automated validation for mandatory government credentials (CAC, Tax Clearance).
+- **Deployed a Transparent Digital Bidding Marketplace (RFQ)**, digitizing the electronic bid submission process and ensuring a tamper-proof audit trail for government contract awards.
+- **Engineered a High-Performance Contract Lifecycle Management (CLM) Hub**, enabling real-time monitoring of project delivery milestones, payment visibility, and performance tracking across the federal vendor network.
+- **Implemented a Secure Vendor Dashboard Architecture**, providing high-net-worth business owners and government administrators with centralized access to compliance status and payment tracking.
+- **Managed Government-Grade Infrastructure Orchestration**, deploying the platform on a secure private VPS using **aaPanel** and **Bitvise SSH**, maintaining 99.9% uptime and zero-security-leak integrity.
+- **Ensured 100% Adherence to FGN Procurement Standards**, architecting the system with strict data security, JWT-based sub-sessions, and audit logging for absolute transparency.
+
+**Technologies:** React, Node.js, Express.js, MongoDB, Tailwind CSS, Framer Motion, JWT Security, FGN Procurement Standards, aaPanel, Bitvise SSH, VPS Hosting
+
+**Live Link:** [vendors.elra.gov.ng](https://vendors.elra.gov.ng)
+
+---
+
+### Lead Full Stack Developer
+**Alertpro** | Alertpro AI  
+*January 2026 – Present*
+
+A cutting-edge, real-time intelligence and broadcast platform designed to eliminate the noise of the modern digital landscape. It continuously scans the web, APIs, news feeds, social media, and private data sources to detect high-impact signals and instantly delivers them to users via WhatsApp, SMS, Email, App Push, and In-App feeds.
+
+**Key Achievements:**
+- Developed Intelligent Monitoring Engine with multi-source scanning and automated scrapers
+- Implemented Smart AI Filtering powered by Gemini to reduce noise and score urgency
+- Architected Multi-Channel Delivery system (WhatsApp, SMS, Email, Push Notifications)
+- Built usage-based Wallet & Billing System with Paystack and Flutterwave integration
+- Engineered real-time alert tracking and data extraction engines
+
+**Technologies:** React, Vite, Tailwind CSS, Framer Motion, Socket.io, Firebase (FCM), Node.js, Express.js, MongoDB, Redis, Gemini AI, Node-cron
+
+**Live Link:** [alert-pro.onrender.com](https://alert-pro.onrender.com)
 
 ---
 
 ### Frontend Developer (Contract)
 **JetOut Experience** | Gurugeeks Royalty Limited  
-*May 2024 – July 2024*
+*May 2025 – July 2025*
 
 Built a comprehensive event planning and booking platform where users can discover, plan, and book experiences, parties, and events. The platform enables event discovery (like events coming to Lagos, Nigeria), ticket purchasing, and a full merchandise store where users can buy party wearables and items to take home. Also developed a complete admin dashboard for managing events, bookings, merchandise inventory, and orders.
 
@@ -220,7 +262,7 @@ Redux, Context API, Auth Context
 Git, GitHub, GitLab, Slack, Figma, ClickUp
 
 ### CI/CD & Deployment
-Vercel, Netlify, Render, GitLab CI/CD, GitHub Actions, Contabo, aaPanel, CPanel
+Vercel, Netlify, Render, GitLab CI/CD, GitHub Actions, Contabo, aaPanel, CPanel, Bitvise SSH, VPS Server Management
 
 ### Payment Integration
 Paystack API, Payment Gateway Integration
@@ -232,14 +274,16 @@ Cloudinary, AJAX, IndexedDB, EmailJS, Toastify, Algorithms, SEO, Web Performance
 
 ## Key Projects Summary
 
-1. **ELRA ERP System** - Full-scale ERP system with 12 modules for Federal Ministry of Finance
-2. **JetOut Experience** - Event planning and booking platform with merchandise store
-3. **Zamani Capital** - Digital financial services platform with lending and savings solutions
-4. **School Bill Management System** - Multi-tenant financial management for educational institutions
-5. **Payroll Management System** - Cloud-based SaaS payroll solution with Nigerian tax compliance
-6. **TechXtro Store** - Modern e-commerce platform with Paystack integration and dark/light mode
-7. **Skill Kernel** - Educational platform template for course providers
-8. **NightWalker** - Tech-enabled night logistics platform with AI-optimized routing and safety systems (In Progress)
+1. **NLSEE 2026** - High-performance event registration and management platform with QR verification
+2. **ELRA Vendor Portal** - Government procurement and compliance management platform
+3. **Alertpro** - Real-time intelligence and broadcast platform with Gemini AI integration
+3. **JetOut Experience** - Event planning and booking platform with merchandise store
+4. **Zamani Capital** - Digital financial services platform with lending and savings solutions
+5. **School Bill Management System** - Multi-tenant financial management for educational institutions
+6. **Payroll Management System** - Cloud-based SaaS payroll solution with Nigerian tax compliance
+7. **TechXtro Store** - Modern e-commerce platform with Paystack integration and dark/light mode
+8. **Skill Kernel** - Educational platform template for course providers
+9. **NightWalker** - Tech-enabled night logistics platform with AI-optimized routing (In Progress)
 
 ---
 
@@ -277,5 +321,4 @@ Education & Certifications
 
 ---
 
-*This resume is generated from portfolio data. Last updated: December 2024*
-
+*This resume is generated from portfolio data. Last updated: March 2026*

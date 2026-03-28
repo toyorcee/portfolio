@@ -21,7 +21,7 @@ const Background = () => {
           ease: "linear",
           repeatType: "reverse",
         }}
-        className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-yellow/5 rounded-full blur-[120px]"
+        className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px]"
       />
 
       {/* Atmospheric blobs - Blob 2 */}
@@ -38,7 +38,7 @@ const Background = () => {
           ease: "linear",
           repeatType: "reverse",
         }}
-        className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-yellow/5 rounded-full blur-[140px]"
+        className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[140px]"
       />
 
        {/* Atmospheric blobs - Blob 3 (Center subtle) */}
