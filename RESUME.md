@@ -23,6 +23,60 @@ Specialized in building scalable architectures, integrating secure financial pip
 ## Professional Experience
 
 ### Lead Full Stack Developer
+**NATOMORAS** | National Commercial Tricycle and Motorcycle Owners and Riders Association  
+*Proposed Project / Live Flow*
+
+**Project Context:** Architecting the secure digital identity, onboarding, and registration ecosystem designed to formalize, regulate, and organize commercial riders across Nigeria, improving national security and compliance.
+
+**Key Achievements:**
+- **Designed an Interactive Operational Walkthrough Flow** detailing the end-to-end rider lifecycle from registration to active status.
+- **Engineered a Secure Digital ID & Dynamic Profile System** with scannable barcode/QR capabilities for instant driver verification.
+- **Developed a Dignitaries and Patron Showcase Hub** featuring interactive components to present national and regional stakeholders.
+- **Built a Multi-Step Rider Onboarding Pipeline** with state-persistent forms for personal profiles, vehicle associations, and secure verifications.
+
+**Technologies:** React, Vite, Tailwind CSS, Framer Motion, Node.js, Express.js, MongoDB, QR/Barcode Scanner API, VPS Hosting
+
+**Live Link:** [natomoras.com](https://natomoras.com/)
+
+---
+
+### Lead Full Stack Developer
+**NATA Nigeria** | Nigeria Automobile Technicians Association  
+*Fully Live*
+
+**Project Context:** Built the official national web portal for the foremost national body representing hundreds of thousands of automobile technicians and artisans across all 36 states of Nigeria.
+
+**Key Achievements:**
+- **Digitized Member Onboarding** with custom registration interfaces supporting state, local government, and branch-specific subdivisions.
+- **Deployed a Public Technician Verification Directory** allowing users and organizations to instantly verify registered mechanics and electricians.
+- **Created a Dynamic Leadership and Branch Directory** map-tracking active branches and executive councils nationwide.
+- **Integrated a Centralized Training and Standard Certification Log** to record member certifications and skill workshops.
+
+**Technologies:** React, Vite, Tailwind CSS, Framer Motion, Node.js, Express.js, MongoDB, aaPanel, VPS Hosting
+
+**Live Link:** [natanigeria.com](https://natanigeria.com/)
+
+---
+
+### Lead Full Stack Developer
+**ATF Nigeria** | Abuja Artisans and Technicians Forum (AATF)  
+*Fully Live*
+
+**Project Context:** Engineered a comprehensive interactive community, news, and compliance platform for the Abuja Artisans and Technicians Forum, developed in synergy with the Equipment Leasing Registration Authority (ELRA).
+
+**Key Achievements:**
+- **Built a Dynamic News & Blog Hub** for real-time publications, industry announcements, and regulatory policy updates.
+- **Developed a High-Performance Media & Project Gallery** showcasing artisans' works, forum events, and community development milestones.
+- **Designed an ELRA Synergy Portal** supporting compliance tracking and technical resource leasing registrations for members.
+- **Integrated a Community Training Registration System** enabling members to sign up for professional development seminars and workshops.
+
+**Technologies:** React, Vite, Tailwind CSS, Framer Motion, Node.js, Express.js, MongoDB, aaPanel, VPS Hosting
+
+**Live Link:** [atfnigeria.ng](https://atfnigeria.ng/)
+
+---
+
+### Lead Full Stack Developer
 **NLSEE 2026** | National Leasing Summit & Equipment Expo  
 *January 2026 – March 2026*
 
@@ -274,16 +328,19 @@ Cloudinary, AJAX, IndexedDB, EmailJS, Toastify, Algorithms, SEO, Web Performance
 
 ## Key Projects Summary
 
-1. **NLSEE 2026** - High-performance event registration and management platform with QR verification
-2. **ELRA Vendor Portal** - Government procurement and compliance management platform
-3. **Alertpro** - Real-time intelligence and broadcast platform with Gemini AI integration
-3. **JetOut Experience** - Event planning and booking platform with merchandise store
-4. **Zamani Capital** - Digital financial services platform with lending and savings solutions
-5. **School Bill Management System** - Multi-tenant financial management for educational institutions
-6. **Payroll Management System** - Cloud-based SaaS payroll solution with Nigerian tax compliance
-7. **TechXtro Store** - Modern e-commerce platform with Paystack integration and dark/light mode
-8. **Skill Kernel** - Educational platform template for course providers
-9. **NightWalker** - Tech-enabled night logistics platform with AI-optimized routing (In Progress)
+1. **NATOMORAS** - Tech-enabled rider digital identity and registration ecosystem with scannable barcode verification
+2. **NATA Nigeria** - National member digitization and public technician verification platform for auto artisans
+3. **ATF Nigeria** - Community hub, news, and regulatory compliance platform for Abuja artisans and technicians
+4. **NLSEE 2026** - High-performance event registration and management platform with QR verification
+5. **ELRA Vendor Portal** - Government procurement and compliance management platform
+6. **Alertpro** - Real-time intelligence and broadcast platform with Gemini AI integration
+7. **JetOut Experience** - Event planning and booking platform with merchandise store
+8. **Zamani Capital** - Digital financial services platform with lending and savings solutions
+9. **School Bill Management System** - Multi-tenant financial management for educational institutions
+10. **Payroll Management System** - Cloud-based SaaS payroll solution with Nigerian tax compliance
+11. **TechXtro Store** - Modern e-commerce platform with Paystack integration and dark/light mode
+12. **Skill Kernel** - Educational platform template for course providers
+13. **NightWalker** - Tech-enabled night logistics platform with AI-optimized routing (In Progress)
 
 ---
 

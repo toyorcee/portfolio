@@ -13,6 +13,9 @@ import moprosperImage from "../assets/images/moprosper.png";
 import ninthWakaImage from "../assets/images/9thwaka.png";
 import alertproLogo from "../assets/images/alertpro-logo.svg";
 import elraLogo from "../assets/images/elra-logo.png";
+import natomorasLogo from "../assets/images/natamora-logo.jpeg";
+import nataLogo from "../assets/images/NATA-logo.png";
+import aatfLogo from "../assets/images/AATF-LOGO.png";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState("web");
@@ -120,6 +123,96 @@ const Projects = () => {
   ];
 
   const webProjects = [
+    {
+      id: 11,
+      title: "NATOMORAS",
+      role: "Lead Full Stack Developer",
+      company: "National Commercial Tricycle and Motorcycle Owners and Riders Association of Nigeria",
+      period: "Proposed Project / Live Flow",
+      description:
+        "A secure, tech-enabled digital identity, onboarding, and registration ecosystem designed to formalize, regulate, and organize commercial tricycle (Keke) and motorcycle (Okada) riders across Nigeria. Features an interactive operational walkthrough, verifiable digital IDs, and custom profile scanning to improve security compliance and foster youth empowerment initiatives.",
+      modules: [
+        "Interactive Operational Flow (Walkthrough proposal showing operational pathways)",
+        "Rider Digital ID & Profile (Scannable dynamic profile after scanning barcode/QR)",
+        "Dignitaries & Patron Showcase (Interactive display of national officers and key stakeholders)",
+        "Multi-Step Rider Onboarding (Personal info, phone verification, and vehicle linking)",
+        "Secure Database Registry (Centralized member and vehicle verification portal)",
+      ],
+      technologies: [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "QR/Barcode Scanning API",
+        "aaPanel / VPS Hosting",
+      ],
+      link: "https://natomoras.com/",
+      image: natomorasLogo,
+      type: "web",
+    },
+    {
+      id: 12,
+      title: "NATA Nigeria",
+      role: "Lead Full Stack Developer",
+      company: "Nigeria Automobile Technicians Association",
+      period: "Fully Live",
+      description:
+        "An official national web portal built for the Nigeria Automobile Technicians Association (NATA), representing and organizing hundreds of thousands of auto mechanics, electricians, panel beaters, and technicians across all 36 states. The platform digitizes member registrations, enables public technician verification, and manages state/local branch organizational structures.",
+      modules: [
+        "Centralized Artisan Registration (State and local branch-specific technician enrollment)",
+        "Technician Verification Directory (Public directory search for certified technicians)",
+        "State & National Executive Registry (Dynamic organizational structures)",
+        "Professional Standards & Training Log (Centralized workshop and certification tracker)",
+        "Member Welfare & Contribution Tracker (Digital welfare community management)",
+      ],
+      technologies: [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "aaPanel Hosting",
+        "Bitvise SSH Deployment",
+      ],
+      link: "https://natanigeria.com/",
+      image: nataLogo,
+      type: "web",
+    },
+    {
+      id: 13,
+      title: "ATF Nigeria",
+      role: "Lead Full Stack Developer",
+      company: "Abuja Artisans and Technicians Forum (AATF)",
+      period: "Fully Live",
+      description:
+        "A highly interactive community, news, and compliance platform designed for the Abuja Artisans and Technicians Forum (AATF), developed in conjunction with the Equipment Leasing Registration Authority (ELRA). Features a dynamic news blog, an extensive media gallery showcasing community projects, and integrated resource management for technical compliance and advocacy.",
+      modules: [
+        "Interactive News & Blog Hub (Real-time technical publications, news, and announcements)",
+        "Artisanal Media & Project Gallery (Rich photo showcase of members' works and community events)",
+        "ELRA Synergy Registry (Resource leasing compliance and regulatory tracking)",
+        "Professional Training & Seminar Registration (Civic empowerment and safety workshops)",
+        "Governing Committee & Advocacy Showcase (Centralized leadership profiles and public directory)",
+      ],
+      technologies: [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "aaPanel Hosting",
+        "Bitvise SSH Deployment",
+      ],
+      link: "https://atfnigeria.ng/",
+      image: aatfLogo,
+      type: "web",
+    },
     {
       id: 8,
       title: "NLSEE 2026",
